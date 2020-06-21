@@ -1,0 +1,29 @@
+CONFIG_NAME: '3stages'
+
+DATASET_NAME: 'flowers'
+EMBEDDING_TYPE: 'Audio_emb'
+DATA_DIR: '/tudelft.net/staff-bulk/ewi/insy/MMC/xinsheng/data/102flowers' #  # 'W:\\staff-bulk\\ewi\\insy\\MMC\\xinsheng\\data\\birds'    #'
+GPU_ID: '0'
+WORKERS: 0 # 8
+
+TREE:
+    BRANCH_NUM: 3
+
+
+TEST:
+    B_EXAMPLE: False
+
+
+TRAIN:
+    FLAG: False
+    NET_G: ''
+    BATCH_SIZE: 11 # 20
+
+
+GAN:
+    EMBEDDING_DIM: 128
+    DF_DIM: 64
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 2
+    B_CONDITION: True

@@ -1,0 +1,67 @@
+result_file: 'Loss_mAP.text'
+WORKERS: 8
+TRAIN:
+    MODAL: 'extraction'   # co-train | classification | teacher_student | extraction
+
+EXTRACT:
+    split: 'train'  # 'train'  'test' ''
+
+IMG:
+    style: 'pickle'   #npy | raw | pickle
+
+IMGF:
+    input_dim: 2048
+    embedding_dim: 1024
+
+SPEECH:
+    style: 'mel'   #npy | WAV
+    model: 'CRNN'   #CNN | CRNN | RNN
+    self_att: True
+    input_dim: 40
+    hidden_size: 512
+    embedding_dim: 1024
+    num_layers: 2
+
+
+CNNRNN:
+    rnn_type: 'GRU'
+    in_channels: 40    #40
+    hid_channels: 64
+    out_channels: 128  #64
+
+CNNRNN_RNN:
+
+    input_size: 128     #64    
+    hidden_size: 512
+    num_layers: 2
+    dropout: 0.0
+    bidirectional: True
+
+CNNRNN_ATT:
+    in_size: 1024
+    hidden_size: 128
+    n_heads: 1
+
+Loss:
+    clss: True
+    gamma_clss: 1.0
+    cont: False
+    gamma_cont: 1.0
+    hinge: False
+    gamma_hinge: 1.0
+    batch: True
+    gamma_batch: 1.0
+    KL: False
+    gamma_KL: 1.0
+    deco: False
+    gamma_deco: 1.0
+    adv: False
+    adv_k: 5
+    gamma_adv: 1.0
+    dist: False
+    gamma_dist: 1.0
+CROSS_ATT:
+    att: False
+    act: 'sigmoid' 
+    smooth_soft: 1.0
+    smooth_sigm: 0.1
