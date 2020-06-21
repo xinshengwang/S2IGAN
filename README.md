@@ -1,5 +1,5 @@
 # S2IGAN
-This is the pytorch implement for our paper [S2IGAN: Speech-to-Image Generation via Adversarial Learning](https://arxiv.org/abs/2005.06968)
+This is the pytorch implement for our paper [S2IGAN: Speech-to-Image Generation via Adversarial Learning](https://arxiv.org/abs/2005.06968). More results can be seen in the [project page](https://xinshengwang.github.io/project/s2igan/).
 
 ### Data processing
 #### CUB-200 (Bird) and Oxford-102 (Flower)
@@ -82,6 +82,7 @@ Download [Places audio data](https://groups.csail.mit.edu/sls/downloads/placesau
 
 ### Running Step-by-step
 Note: Change the path in .sh files to your data path. If you use the speech embedding provided by us (see Step 2), you can start from **step3**. 
+
 **step1:** Train SEN
 
 ```
