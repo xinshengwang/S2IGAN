@@ -3,6 +3,7 @@ This is the pytorch implement for our paper [S2IGAN: Speech-to-Image Generation 
 
 ### Data processing
 #### CUB-200 (Bird) and Oxford-102 (Flower)
+**step0:** You can download the synthesized spoken caption database from the [project page](https://xinshengwang.github.io/project/s2igan/), and then go to "step3". Or, you can start from "step 1" and synthesize spoken caption by yourself.
 **step1:** Download CUB and Oxford [Image and Text Captions](https://github.com/reedscot/icml2016)
 
 **step2:** Using a TTS system to transfer text captions to speech captions. In our work, Tacotron2 pre-trained by [NVIDIA](https://github.com/NVIDIA/tacotron2) was adopted. The original code released by [NVIDIA](https://github.com/NVIDIA/tacotron2) doesn't provide the code for the batch inference. We made slight changes to make it can be used to perform batch inference directly. You can download it [here](https://github.com/xinshengwang/Tacotron2_batch_inference).
